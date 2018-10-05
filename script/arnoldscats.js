@@ -17,7 +17,17 @@ function showNames(names, elementSelector)
 {
     _.forEach(names, function(name)
     {
-        $(elementSelector).append("<li>" + name + "</li>")
+        //Make a bullet point
+        var petList = document.createElement("li");
+        //Get a name
+        var petName = document.createTextNode(name);
+        //Put the name against the bullet point
+        petList.appendChild(petName);
+
+        //Find the gender headings
+        var genderHeading = document.getElementById(elementSelector);
+        //List the list under the correct heading
+        genderHeading.appendChild(petList);
     });
 }
 
