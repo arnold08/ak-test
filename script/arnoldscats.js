@@ -34,8 +34,8 @@ function showNames(names, elementSelector)
 //Define the function to write the cat names under the correct heading
 function processJSON(data)
 {
-    showNames(extractPetNames(data, "Male"), "#maleOwners");
-    showNames(extractPetNames(data, "Female"), "#femaleOwners");
+    showNames(extractPetNames(data, "Male"), "maleOwners");
+    showNames(extractPetNames(data, "Female"), "femaleOwners");
 }
 
 //Define the function to get JSON and put the whole thing together
